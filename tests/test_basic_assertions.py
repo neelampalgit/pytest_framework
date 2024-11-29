@@ -17,7 +17,7 @@ def test_page_load():
     driver.find_element(By.CLASS_NAME, "orangehrm-login-button").click()
     time.sleep(5)
 
-    assert "Dashboard" in driver.current_url, "Login failed"
+    assert "dashboard" in driver.current_url, "Login failed"
 
     welcome_text = driver.find_element(By.TAG_NAME, "h6").text
     # assert "Dashboard" in welcome_text, "Dashboard text not found displayed on the dashboard"
